@@ -2,3 +2,6 @@ transformers
 sentencepiece
 datasets
 torch
+fastapi
+uvicorn
+pytest
