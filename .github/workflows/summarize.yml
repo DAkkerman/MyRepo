@@ -31,7 +31,9 @@ jobs:
 
    # - name: Run tests
     #  run: pytest
-
+    - name: Run linter
+      run: flake8 .
+      
     - name: Run the application
       run: |
         uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload &
