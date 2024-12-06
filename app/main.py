@@ -2,19 +2,15 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
-
 app = FastAPI()
-
 
 model_name = "IlyaGusev/rut5_base_sum_gazeta"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 
 
-
 class Article(BaseModel):
     text: str
-
 
 
 @app.post("/summarize/")
