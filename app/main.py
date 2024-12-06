@@ -30,7 +30,5 @@ async def summarize(article: Article):
         num_beams=5,
         early_stopping=True
     )[0]
-
-    
     summary = tokenizer.decode(output_ids, skip_special_tokens=True)
     return {"summary": summary}
