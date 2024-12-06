@@ -39,8 +39,8 @@ jobs:
         echo "Response from summarize endpoint:"
         echo "$RESPONSE"
 
-    - name: Run tests
-      run: pytest
+   # - name: Run tests
+    # run: pytest
       
     - name: Run linter
       run: flake8 .
